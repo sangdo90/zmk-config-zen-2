@@ -86,6 +86,8 @@
 &trans      &kp NUMBER_6     &kp N7        &kp N8        &kp N9        &kp N0         &kp UNDERSCORE  &kp PLUS       &kp TILDE     &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans
                                            &trans        &trans        &trans         &trans          &trans         &trans
             >;
+
+            label = "L1";
         };
 
         layer_2 {
@@ -95,10 +97,12 @@
 &trans  &kp F11  &kp F12  &none   &none   &none      &kp K_MUTE       &none     &trans        &none      &none     &trans
                           &trans  &trans  &trans     &trans           &trans    &trans
             >;
+
+            label = "L2";
         };
 
         layer_3 {
-            display-name = "SYMBOL";
+            display-name = "L3";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
@@ -115,7 +119,7 @@
         };
 
         layer_4 {
-            display-name = "Fn";
+            display-name = "L4";
             bindings = <
 &trans  &none         &kp F2        &kp F3  &kp F4      &kp F5         &kp F6       &kp F7  &kp F8  &kp F9  &kp F10          &kp F11
 &trans  &trans        &trans        &trans  &sys_reset  &bootloader    &bootloader  &trans  &trans  &trans  &kp PRINTSCREEN  &kp F12
@@ -125,7 +129,7 @@
         };
 
         lower_layer {
-            display-name = "NUMBER";
+            display-name = "L5";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
