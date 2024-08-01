@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -35,6 +36,16 @@
         layer_3 {
             bindings = <&mo 3>;
             key-positions = <13 14 37>;
+        };
+
+        toggle_layer_4 {
+            bindings = <&tog 4>;
+            key-positions = <16 37 13 14>;
+        };
+
+        toggle_layer_5 {
+            bindings = <&tog 5>;
+            key-positions = <13 14 17 37>;
         };
     };
 
@@ -68,6 +79,15 @@
         };
 
         layer_2 {
+            bindings = <
+&trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5     &kp C_VOLUME_UP  &none     &kp UP_ARROW  &none      &kp HOME  &trans
+&trans  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10    &kp C_VOL_DN     &kp LEFT  &kp DOWN      &kp RIGHT  &kp END   &trans
+&trans  &kp F11  &kp F12  &none   &none   &none      &kp K_MUTE       &none     &trans        &none      &none     &trans
+                          &trans  &trans  &trans     &trans           &trans    &trans
+            >;
+        };
+
+        layer_3 {
             display-name = "SYMBOL";
 
             // -----------------------------------------------------------------------------------------
@@ -77,20 +97,20 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &none         &none         &none     &none     &none        &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none     &none     &none        &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                    &trans    &trans    &kp SPACE    &kp RET    &trans     &trans
+&none  &kp EXCL  &kp AT  &kp HASH  &kp PAGE_UP  &kp PAGE_DOWN    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
+&none  &none     &none   &none     &mkp LCLK    &mkp RCLK        &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+&none  &none     &none   &none     &none        &none            &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+                         &none     &none        &kp SPACE        &kp RET    &none      &none
             >;
         };
 
-        layer_3 {
+        layer_4 {
             display-name = "Fn";
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4      &kp F5         &kp F6       &kp F7  &kp F8  &kp F9  &kp F10          &kp F11
-&trans  &trans  &trans  &trans  &sys_reset  &bootloader    &bootloader  &trans  &trans  &trans  &kp PRINTSCREEN  &kp F12
-&trans  &trans  &trans  &trans  &trans      &trans         &trans       &trans  &trans  &trans  &kp SCROLLLOCK   &kp PAUSE_BREAK
-                        &trans  &trans      &trans         &trans       &trans  &trans
+&trans  &none         &kp F2        &kp F3  &kp F4      &kp F5         &kp F6       &kp F7  &kp F8  &kp F9  &kp F10          &kp F11
+&trans  &trans        &trans        &trans  &sys_reset  &bootloader    &bootloader  &trans  &trans  &trans  &kp PRINTSCREEN  &kp F12
+&trans  &out OUT_USB  &out OUT_BLE  &trans  &trans      &trans         &trans       &trans  &trans  &trans  &kp SCROLLLOCK   &kp PAUSE_BREAK
+                                    &trans  &trans      &trans         &trans       &trans  &trans
             >;
         };
 
