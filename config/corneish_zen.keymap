@@ -52,7 +52,7 @@
 
         r_toggle_layer_4 {
             bindings = <&tog 4>;
-            key-positions = <22 21 40>;
+            key-positions = <22 21 40 19>;
         };
 
         r_toggle_layer_5 {
